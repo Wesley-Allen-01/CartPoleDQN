@@ -9,7 +9,7 @@ n_observations = env.observation_space.shape[0]
 n_actions = env.action_space.n
 policy_net = DQN(n_observations, n_actions)
 
-policy_net.load_state_dict(torch.load('model.pth'))
+policy_net.load_state_dict(torch.load('models/model.pth'))
 policy_net.eval()
 
 state, _ = env.reset()
